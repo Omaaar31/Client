@@ -39,8 +39,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val intent= Intent(this,MainActivity::class.java)
-        startActivity(intent)
+        finish()
 
         return super.onOptionsItemSelected(item)
     }
