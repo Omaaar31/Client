@@ -1,0 +1,6 @@
+com/example/projetcommun/BuildConfig.java
+ com.example.projetcommun.BuildConfig
+com/example/projetcommun/databinding/ActivityMapsBinding.java
+ com.example.projetcommun.databinding.ActivityMapsBinding
+com/example/projetcommun/databinding/ActivityMainBinding.java
+ com.example.projetcommun.databinding.ActivityMainBinding
