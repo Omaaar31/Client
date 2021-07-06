@@ -39,7 +39,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        finish()
+        finish() // Menu pour rediriger à l'acceuil
 
         return super.onOptionsItemSelected(item)
     }
