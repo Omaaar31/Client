@@ -3,10 +3,9 @@ package com.example.projetcommun
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
-
 
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -21,6 +20,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     lateinit var mMap: GoogleMap
     lateinit var binding: ActivityMapsBinding
+    private var threadRunning = true
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +66,27 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+    }
+
+
+    fun startThread() {
+        threadRunning = true
+        Thread {
+            while (threadRunning) {
+                SystemClock.sleep(1000)
+                try {
+                    //Chercher la donnée
+                    val latLng: LatLng = WSUtils.iSSPosition
+                    println(latLng)
+                    //Mettre à jour l'IHM
+                    showOnMap(latLng)
+                } catch (e: Exception) {
+                    //Affiche le detail de l'erreur dans la console
+                    e.printStackTrace()
+                    //showErrorOnUiThread(e.getMessage());
+                }
+            }
+        }.start()
     }
 
     private fun showOnMap(position: LatLng) {
