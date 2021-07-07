@@ -4,24 +4,36 @@ package com.example.projetcommun.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import com.example.projetcommun.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityMapsBinding implements ViewBinding {
   @NonNull
-  private final View rootView;
+  private final LinearLayout rootView;
 
-  private ActivityMapsBinding(@NonNull View rootView) {
+  @NonNull
+  public final LinearLayout layout;
+
+  @NonNull
+  public final TextView tv;
+
+  private ActivityMapsBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout layout,
+      @NonNull TextView tv) {
     this.rootView = rootView;
+    this.layout = layout;
+    this.tv = tv;
   }
 
   @Override
   @NonNull
-  public View getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -42,10 +54,21 @@ public final class ActivityMapsBinding implements ViewBinding {
 
   @NonNull
   public static ActivityMapsBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      LinearLayout layout = (LinearLayout) rootView;
 
-    return new ActivityMapsBinding(rootView);
+      id = R.id.tv;
+      TextView tv = rootView.findViewById(id);
+      if (tv == null) {
+        break missingId;
+      }
+
+      return new ActivityMapsBinding((LinearLayout) rootView, layout, tv);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -1967,7 +1967,6 @@ id line3
 id linear
 id listMode
 id list_item
-id map
 id masked
 id material_clock_display
 id material_clock_face
@@ -2168,6 +2167,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv
 id unchecked
 id uniform
 id unlabeled
