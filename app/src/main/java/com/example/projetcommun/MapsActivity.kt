@@ -1,26 +1,26 @@
 package com.example.projetcommun
 
+
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.Menu
 import android.view.MenuItem
-
-
-import com.google.android.gms.maps.CameraUpdateFactory
+import androidx.appcompat.app.AppCompatActivity
+import com.example.projetcommun.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.projetcommun.databinding.ActivityMapsBinding
+import kotlin.concurrent.thread
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    lateinit var mMap: GoogleMap
+     var mMap: GoogleMap? = null
     lateinit var binding: ActivityMapsBinding
-    private var threadRunning = true
+
+
+    val data = ArrayList<PointBean>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +33,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.layout) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+       //Point temporaire
+        data.add(PointBean(1, 1.2, 2.3))
+
+        loadPoint()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -61,37 +66,38 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+        refreshMap()
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }
 
-
-    fun startThread() {
-        threadRunning = true
-        Thread {
-            while (threadRunning) {
-                SystemClock.sleep(1000)
-                try {
-                    //Chercher la donnée
-                    val latLng: LatLng = WSUtils.iSSPosition
-                    println(latLng)
-                    //Mettre à jour l'IHM
-                    showOnMap(latLng)
-                } catch (e: Exception) {
-                    //Affiche le detail de l'erreur dans la console
-                    e.printStackTrace()
-                    //showErrorOnUiThread(e.getMessage());
-                }
-            }
-        }.start()
-    }
-
-    private fun showOnMap(position: LatLng) {
+    private fun refreshMap() {
         if (mMap == null) {
             return
+        }
+        //mMap!!.isMyLocationEnabled(true)
+
+        runOnUiThread {
+            mMap!!.clear() //efface tous les points
+            //Affiche un marker sur la
+            data.forEach {
+                val latlng = LatLng(it.lattitude, it.longitude)
+                mMap!!.addMarker(MarkerOptions().position(latlng).title("Vous êtes ici"))
+
+            }
+
+            //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        }
+    }
+
+
+    fun loadPoint(){
+        thread {
+            //Chercher les données avec WSUtils
+//            WSUtils.retest()
+            data.clear()
+            data.addAll(listOf(PointBean(1, 1.9, 2.3)))
+            //mettre à jour la liste data
+            refreshMap()
         }
     }
 
