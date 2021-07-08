@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625653598060</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout startThread (try and catch)">
+      <created>1625729057957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625729057957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,10 +255,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1625650356004" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1625653901004">
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1625729171862">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625653901004" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625729171862" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625650590020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
