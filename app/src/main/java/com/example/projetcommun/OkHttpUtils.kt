@@ -10,6 +10,8 @@ import okhttp3.Response
 val MEDIA_TYPE_JSON = "application/json; charset=utf - 8".toMediaType()
 
 class OkHttpUtils {
+
+
     @Throws(Exception::class)
     fun sendGetOkHttpRequest(url: String): String {
         Log.w("tag", "url : $url")

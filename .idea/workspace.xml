@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9de0397-f74e-461f-9bd3-a89d9a4439a6" name="Default Changelist" comment="Ajout startThread (try and catch)" />
+    <list default="true" id="c9de0397-f74e-461f-9bd3-a89d9a4439a6" name="Default Changelist" comment="OkHttpUtils complet" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625729057957</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="OkHttpUtils complet">
+      <created>1625729544630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625729544630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,9 +225,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Push sur branche Omar" />
-    <MESSAGE value="OkHttpUtils complet" />
     <MESSAGE value="Ajout startThread (try and catch)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout startThread (try and catch)" />
+    <MESSAGE value="OkHttpUtils complet" />
+    <option name="LAST_COMMIT_MESSAGE" value="OkHttpUtils complet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1625645019704">
