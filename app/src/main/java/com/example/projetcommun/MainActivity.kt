@@ -17,18 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        thread{
-            try {
-                WSUtils.test()
-                WSUtils.retest()
-
-            }catch(e:Exception) {
-                e.printStackTrace()
-            }
-
-        }
-
-
     }
 
     //créer menu

@@ -1,16 +1,11 @@
 package com.example.projetcommun;
 
-import android.graphics.Point;
-
-import com.google.android.gms.maps.model.LatLng;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
 public class WSUtils {
-
-    private static final String URL_WS = "http://192.168.10.13:8080/test";
 
    private static final String URL_SERVER =  "http://192.168.10.13:8080";
 
@@ -24,34 +19,25 @@ public class WSUtils {
     }
 
 
-    public static PointBean loadPoint(double latitude, double longitude) throws Exception {
-        String url = "&lat=" + latitude + "&lon=" + longitude;
+
+    //Envoyer un point
+    public static void sendPoint(PointBean pointBean) throws Exception {
+        String url = URL_SERVER +  "/setPoints";
         //Requete
-        String json = OkHttpUtilsKt.sendGetOkHttpRequest(url);
-        //Parser le JSON
-        System.out.println("Json = " + json);
-        PointBean pointBean = new Gson().fromJson(json, PointBean.class);
-        return pointBean;
+       String jsonAEnvoyer =  new Gson().toJson(pointBean);
+       OkHttpUtilsKt.sendPostOkHttpRequest(url, jsonAEnvoyer);
     }
 
-    public static void retest() {
-        Gson gson = new Gson();
-        ArrayList<PointBean> list = gson.fromJson("mon json", new TypeToken<ArrayList<PointBean>>() {
-        }.getType());
+    //Je reçois un point
+    public static ArrayList<PointBean> getPoints() throws Exception {
+        String url = URL_SERVER +  "/getPoints";
+
+
+      String jsonRecu =   OkHttpUtilsKt.sendGetOkHttpRequest(url);
+      //Je convertie json en arrayList
+      Gson gson = new Gson();
+        ArrayList<PointBean> list  = gson.fromJson(jsonRecu, new  TypeToken<ArrayList<PointBean>>(){}.getType());
+        return list;
     }
 
-//    public static LatLng getMapPosition() throws Exception {
-//        //Requete
-//        String json = OkHttpUtilsKt.sendGetOkHttpRequest(URL_WS_ISS);
-//        //Parser le JSON
-//        System.out.println("Json = " + json);
-//        PointBean pointBean = new Gson().fromJson(json, PointBean.class);
-//        if (PointBean.() == null
-//                || PointBean.getIss_position().latitude == 0
-//                || PointBean.getIss_position().longitude == 0) {
-//            throw new Exception("Pas de position");
-//        }
-//
-//        return isswsResponseBean.getIss_position();
-//    }
 }

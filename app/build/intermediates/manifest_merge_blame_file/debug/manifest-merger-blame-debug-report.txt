@@ -44,7 +44,7 @@
 30    </queries>
 31
 32    <application
-32-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:14:5-45:19
+32-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:14:5-49:19
 33        android:allowBackup="true"
 33-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:15:9-35
 34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -81,48 +81,49 @@
 55-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:33:13-52
 56
 57        <activity
-57-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:35:9-37:68
+57-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:35:9-45:20
 58            android:name="com.example.projetcommun.MapsActivity"
 58-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:36:13-41
-59            android:label="@string/title_activity_maps" />
+59            android:label="@string/title_activity_maps" >
 59-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:37:13-56
-60        <activity android:name="com.example.projetcommun.MainActivity" >
-60-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:38:9-44:20
-60-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:38:19-47
-61            <intent-filter>
-61-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:39:13-43:29
-62                <action android:name="android.intent.action.MAIN" />
-62-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:40:17-69
-62-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:40:25-66
-63
-64                <category android:name="android.intent.category.LAUNCHER" />
-64-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:42:17-77
-64-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:42:27-74
-65            </intent-filter>
-66        </activity>
-67        <!-- Needs to be explicitly declared on P+ -->
-68        <uses-library
-68-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\a90f36c6145a0c44ed2e9f9f213f445f\play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
-69            android:name="org.apache.http.legacy"
-69-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\a90f36c6145a0c44ed2e9f9f213f445f\play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
-70            android:required="false" />
-70-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\a90f36c6145a0c44ed2e9f9f213f445f\play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
-71
-72        <activity
-72-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-73            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-74            android:exported="false"
-74-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-75            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-75-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-76
-77        <meta-data
-77-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\3a8cc5b1818491a08d31ccd07098d80a\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-78            android:name="com.google.android.gms.version"
-78-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\3a8cc5b1818491a08d31ccd07098d80a\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-79            android:value="@integer/google_play_services_version" />
-79-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\3a8cc5b1818491a08d31ccd07098d80a\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-80    </application>
-81
-82</manifest>
+60            <intent-filter>
+60-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:38:13-42:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:39:17-69
+61-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:39:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:41:17-77
+63-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:41:27-74
+64            </intent-filter>
+65        </activity>
+66        <activity android:name="com.example.projetcommun.MainActivity" >
+66-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:46:9-48:20
+66-->C:\Users\ADMIN\AndroidStudioProjects\projetcommun\app\src\main\AndroidManifest.xml:46:19-47
+67        </activity>
+68        <!-- Needs to be explicitly declared on P+ -->
+69        <uses-library
+69-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\a90f36c6145a0c44ed2e9f9f213f445f\play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+70            android:name="org.apache.http.legacy"
+70-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\a90f36c6145a0c44ed2e9f9f213f445f\play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+71            android:required="false" />
+71-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\a90f36c6145a0c44ed2e9f9f213f445f\play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+72
+73        <activity
+73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+74            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+74-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+75            android:exported="false"
+75-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+76-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\df04a6be86cf9a10e4926d44746e95c8\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+77
+78        <meta-data
+78-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\3a8cc5b1818491a08d31ccd07098d80a\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+79            android:name="com.google.android.gms.version"
+79-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\3a8cc5b1818491a08d31ccd07098d80a\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+80            android:value="@integer/google_play_services_version" />
+80-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\3a8cc5b1818491a08d31ccd07098d80a\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+81    </application>
+82
+83</manifest>

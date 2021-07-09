@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetcommun.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.GoogleMap
@@ -92,12 +93,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun loadPoint(){
         thread {
-            //Chercher les données avec WSUtils
-//            WSUtils.retest()
-            data.clear()
-            data.addAll(listOf(PointBean(1, 1.9, 2.3)))
-            //mettre à jour la liste data
-            refreshMap()
+            try {
+                //Chercher les données avec WSUtils
+                data.clear()
+                data.addAll(WSUtils.getPoints())
+                //mettre à jour la liste data
+                refreshMap()
+            }
+            catch(e:Exception) {
+                runOnUiThread {
+                    Toast.makeText(MapsActivity@this, "Erreur : " + e.message, Toast.LENGTH_LONG).show()
+                }
+            }
         }
     }
 
